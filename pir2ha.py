@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 #
-#   Pi PIR Motion Detecting MQTT Client
+#   Pi PIR Motion with Home Assistant MQTT Discovery
 #
 #   Version:    0.1
 #   Status:     Development
-#   Github:     https://github.com/robmarkoski/pi-motion-mqtt-sensor
+#   Github:     https://github.com/Chreece/pi_motion_home_assistant
 #
 
 import os
