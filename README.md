@@ -6,7 +6,7 @@ https://github.com/R4scal/mhz19-mqtt-daemon (Most of the code comes from this)
 https://github.com/robmarkoski/pi-motion-mqtt-sensor 
 Thank you very much @robmarkoski and @R4skal
 
-This python script should work in any Rpi with a PIR connected to a GPIO and will create an entity in HA through MQTT Auto Discovery.
+This python script should work on any Rpi with a PIR connected to a GPIO and will create an entity in HA through MQTT Auto Discovery.
 
 # Installation:
 We need some py scripts to install first:
