@@ -22,6 +22,10 @@ import argparse
 from time import time, sleep, localtime, strftime
 from configparser import ConfigParser
 from unidecode import unidecode
+from colorama import init as colorama_init
+from colorama import Fore, Back, Style
+from unidecode import unidecode
+import sdnotify
 
 
 PIR_GPIO = 7 # GPIO Pin of PIR Sensor
