@@ -1,0 +1,14 @@
+[Unit]
+Description=My test service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+# If your username isn't pi change it
+User=pi
+# After /usr/bin/python3 give the exact folder path to pir2ha.py
+ExecStart=/usr/bin/python3 /home/pi/pir2ha/pir2ha.py
+
+[Install]
+WantedBy=multi-user.target
