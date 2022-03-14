@@ -27,19 +27,6 @@ from colorama import Fore, Back, Style
 from unidecode import unidecode
 import sdnotify
 
-
-PIR_GPIO = 7 # GPIO Pin of PIR Sensor
-
-# Update this to adjust sensitivity. Default is 0.5
-PIR_THRESHOLD = 0.5
-
-# Update the follow MQTT Settings for your system.
-MQTT_USER = "mqtt"              # MQTT Username
-MQTT_PASS = "mqtt_password"     # MQTT Password
-MQTT_CLIENT_ID = "pisensor"     # MQTT Client Id
-MQTT_HOST_IP = "127.0.0.1"      # MQTT HOST
-MQTT_PORT = 1883                # MQTT PORT (DEFAULT 1883)
-
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print_line('MQTT connection established', console=True, sd_notify=True)
@@ -71,6 +58,8 @@ config.optionxform = str
 config.read([os.path.join(config_dir, 'config.ini.dist'), os.path.join(config_dir, 'config.ini')])
 
 base_topic = 'homeassistant'
+
+pir = MotionSensor(config['PIR'].getint('gpio', 7), config['PIR'].getfloat('threshold', 0.5))
 
 print_line('Connecting to MQTT broker ...')
 mqtt_client = mqtt.Client()
@@ -116,7 +105,6 @@ print_line('Current sensor name is "{}"'.format(sensor_name).lower())
     mqtt_client.publish('{}/{}_pir/config'.format(topic_path, sensor_name).lower(), json.dumps(payload), 1, True)
 
 try:  
-    pir = MotionSensor(config['PIR'].getint('gpio', 7), config['PIR'].getfloat('threshold', 0.5))
     pir.wait_for_no_motion()
     while True:
         pir.wait_for_motion()
