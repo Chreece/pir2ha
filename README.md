@@ -1,5 +1,5 @@
 # PIR2HA: a PIR to Home Assistant script with MQTT Auto-Discovery
-In search for a PIR to HA (Home Assistant) work-out-of-the-box solution I decided to create one since there wasn't anything to find.
+My search for a PIR to HA (Home Assistant) work-out-of-the-box solution wasn't a success.
 
 Since I am not having the necessary skills to write my own script, I decided to create my Frankenstein, using the code from two working scripts:
 https://github.com/R4scal/mhz19-mqtt-daemon (Most of the code comes from this)
