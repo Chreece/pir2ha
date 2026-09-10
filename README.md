@@ -1,4 +1,7 @@
 # PIR2HA: a PIR to Home Assistant script with MQTT Auto-Discovery
+
+💙 **Enjoying this hobby project? [Send a voluntary thank-you via PayPal](https://www.paypal.me/ChristosBaltatzidis).**
+
 My search for a PIR to HA (Home Assistant) work-out-of-the-box solution wasn't a success.
 
 Since I am not having the necessary skills to write my own script, I decided to create my Frankenstein, using the code from two working scripts:
@@ -42,3 +45,11 @@ After that a new binary_sensor entity should arrive in HA with the name from you
 Since there is a device_class: motion it should already have the motion icon and you can also make changes in the UI because of the unique_id.
 
 ENJOY!
+
+## ❤️ Voluntary support
+
+This is a private hobby project maintained in my free time and provided independently of contributions.
+
+If you enjoy the project and would like to send me a voluntary personal thank-you, you can use **[PayPal](https://www.paypal.me/ChristosBaltatzidis)**.
+
+Contributions are completely optional and do **not** buy or guarantee features, support, development work, early access, priority, or any other service. This is not a charitable donation and no donation receipt is issued.
