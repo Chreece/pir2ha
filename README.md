@@ -7,8 +7,6 @@
 
 # PIR2HA: a PIR to Home Assistant script with MQTT Auto-Discovery
 
-💙 **Enjoying this hobby project? [Send a voluntary thank-you via Ko-fi](https://ko-fi.com/chreece).**
-
 My search for a PIR to HA (Home Assistant) work-out-of-the-box solution wasn't a success.
 
 Since I am not having the necessary skills to write my own script, I decided to create my Frankenstein, using the code from two working scripts:
